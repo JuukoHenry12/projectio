@@ -2,24 +2,21 @@ import { gql } from "apollo-server-express";
 
 
 export const typeDefs = gql`
-  type Listing {
+  type Invoice{
     id: ID!
-    title: String!
-    image: String!
-    address: String!
+    details: String!
+    item: String!
+    quantity: Int!
     price: Int!
-    numOfGuests: Int!
-    numOfBeds: Int!
-    numOfBaths: Int!
-    rating: Int!
+   
   }
   
   type Query {
-    listings: [Listing!]!
+    invoice: [Invoice!]!
   }
   
   type Mutation{
-      deleteListing(id:ID!):Listing!
+      deleteListing(id:ID!):Invoice!
    }
 
 `
