@@ -1,7 +1,7 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { typeDefs, resolvers } from "./ghql"
-import {createContext} from './context'
+import createContext from './context'
 
 
 const app = express();
