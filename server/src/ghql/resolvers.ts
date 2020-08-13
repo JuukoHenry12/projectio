@@ -6,7 +6,7 @@ export const resolvers = {
     }
   },
   Mutation: {
-    deleteListing: (_root: undefined, { id }: { id: string }) => {
+    deleteInvoice: (_root: undefined, { id }: { id: string }) => {
       for (let i = 0; i < invoice.length; i++) {
         if (invoice[i].id === id) {
           return invoice.splice(i, 1)[0];
